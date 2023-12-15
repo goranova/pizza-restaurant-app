@@ -1,0 +1,12 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=postgres_password
+      - POSTGRES_DB=pizza-db
+    ports:
+      - 5432:5432
+    volumes: 
+      - ./postgres-db:/var/lib/postgressql/data
