@@ -1,0 +1,22 @@
+[
+  {
+    "itemName": "Margarita",
+    "quantity": 1
+  },
+  {
+    "itemName": "Bernard",
+    "quantity": 2
+  },
+  {
+    "itemName": "Krusovice",
+    "quantity": 1
+  },
+  {
+    "itemName": "Polo",
+    "quantity": 2
+  },
+  {
+    "itemName": "Red Wine glass",
+    "quantity": "1"
+  }
+]

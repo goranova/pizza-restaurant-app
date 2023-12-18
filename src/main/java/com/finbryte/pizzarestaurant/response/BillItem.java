@@ -1,17 +1,19 @@
 package com.finbryte.pizzarestaurant.response;
 
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
 @Data
-@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class BillItem {
 
     Integer quantity;
-    String item;
-    BigDecimal price;
+    String itemName;
+    BigDecimal rate;
     BigDecimal sum;
 
 }

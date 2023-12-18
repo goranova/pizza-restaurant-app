@@ -15,29 +15,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class MenuService {
+public class MenuItemService {
     @Autowired
     private MenuItemRepository itemRepo;
 
     public Bill processOrder(List<OrderedItem> orderedItems){
-        List<BillItem> billItems  = new ArrayList<>();
+        List<BillItem> billItems = new ArrayList<>();
 
         for(OrderedItem orderedItem: orderedItems){
 
             MenuItem menuItem = findMenuItemByName(orderedItem);
-            BigDecimal sum  = menuItem.getPrice().multiply(BigDecimal.valueOf(orderedItem.getQuantity()));
-            BillItem billItem = BillItem.builder()
-                    .quantity(orderedItem.getQuantity())
-                    .item(menuItem.getName())
-                    .price(menuItem.getPrice())
-                    .sum(sum).build();
-
+            BigDecimal sum = menuItem.getPrice().multiply(BigDecimal.valueOf(orderedItem.getQuantity()));
+            BillItem billItem = new BillItem( orderedItem.getQuantity(), menuItem.getName(),
+                    menuItem.getPrice(),sum );
             billItems.add(billItem);
         }
         return generateBill(billItems);
     }
 
-    private MenuItem findMenuItemByName(OrderedItem orderedItem){
+    public MenuItem findMenuItemByName(OrderedItem orderedItem){
 
         MenuItem menuItem = itemRepo.findMenuItemByName(orderedItem.getItemName());
         if(menuItem==null){
@@ -50,9 +46,8 @@ public class MenuService {
 
         BigDecimal totalSum = billItems.stream().map(BillItem::getSum)
                 .reduce(BigDecimal.ZERO,BigDecimal::add);
-        Bill bill = Bill.builder()
+        return Bill.builder()
                 .billItems(billItems)
                 .totalSum(totalSum).build();
-        return bill;
     }
 }

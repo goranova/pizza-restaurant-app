@@ -1,6 +1,6 @@
 package com.finbryte.pizzarestaurant.model;
 
-import com.finbryte.pizzarestaurant.enums.MenuType;
+import com.finbryte.pizzarestaurant.enums.MenuItemType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,5 +31,5 @@ public class MenuItem {
 
     @Enumerated(EnumType.STRING)
     @Column(name="TYPE", insertable = false, updatable = false)
-    private MenuType type;
+    private MenuItemType type;
 }

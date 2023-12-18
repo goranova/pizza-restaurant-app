@@ -1,6 +1,6 @@
 package com.finbryte.pizzarestaurant.enums;
 
-public enum MenuType {
+public enum MenuItemType {
     BEER("BEER"),
     WINE("WINE"),
     COFFEE("COFFEE"),
@@ -9,7 +9,7 @@ public enum MenuType {
 
     private String name;
 
-    MenuType(String name){
+    MenuItemType(String name){
         this.name = name;
     }
 

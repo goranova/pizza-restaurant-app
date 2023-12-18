@@ -6,7 +6,8 @@ import java.util.ResourceBundle;
 
 public enum Message {
 
-    MISSING_MENU_ITEM("missing.menu.item");
+    MISSING_MENU_ITEM("missing.menu.item"),
+    UNEXPECTED_EXCEPTION("unexpected.exception");
 
     private static ResourceBundle resourceBundle = ResourceBundle.getBundle("messages",
             Locale.ENGLISH);

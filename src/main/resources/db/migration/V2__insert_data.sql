@@ -15,7 +15,7 @@ insert into pizza.menu_item(name, price, type)
 values('Bernard', 7.89,'BEER');
 
 insert into pizza.menu_item(name, price, type)
-values('Krushuvice',8.52,'BEER');
+values('Krusovice',8.52,'BEER');
 
 insert into pizza.menu_item(name, price, type)
 values('Staropramen', 5.49,'BEER');
@@ -41,4 +41,6 @@ values('Coca-Cola',3.25,'SOFT_DRINKS');
 insert into pizza.menu_item(name, price, type)
 values('Fanta', 4.25,'SOFT_DRINKS');
 
+insert into pizza.menu_item(name, price, type)
+values('Peperoni', 16.90,'PIZZA');
 

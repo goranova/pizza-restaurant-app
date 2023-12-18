@@ -1,6 +1,5 @@
 package com.finbryte.pizzarestaurant.response;
 
-import com.finbryte.pizzarestaurant.response.BillItem;
 import lombok.Builder;
 import lombok.Data;
 
