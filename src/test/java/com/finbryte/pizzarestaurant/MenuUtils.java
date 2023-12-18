@@ -17,7 +17,7 @@ public class MenuUtils {
     public static final BigDecimal BEER_SUM_EXPECTED = new BigDecimal("28.80");
     public static final BigDecimal PIZZA_SUM_EXPECTED = new BigDecimal("33.80");
     public static final BigDecimal TOTAL_SUM_EXPECTED = new BigDecimal("62.60");
-    public static final String BEER_NAME = "BERNARD";
+    public static final String BEER_NAME = "Bernard";
     public static final String PIZZA_NAME = "Peperoni";
 
 
